@@ -29,7 +29,8 @@ export default function HomeScreen() {
     const fileExt = originalName.split('.').pop();
     const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
     
-    const base64 = await FileSystem.readAsStringAsync(fileUri, { encoding: FileSystem.EncodingType.Base64 });
+    // CAMBIO AQUÍ: Usamos directamente el string 'base64' para evitar el error de undefined
+    const base64 = await FileSystem.readAsStringAsync(fileUri, { encoding: 'base64' });
     const buffer = Uint8Array.from(atob(base64), c => c.charCodeAt(0)).buffer;
 
     const { data, error } = await supabase.storage
