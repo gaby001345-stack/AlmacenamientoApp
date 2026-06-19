@@ -38,7 +38,7 @@ export const FileUploader: React.FC<FileUploaderProps> = ({ document, onFileSele
         onPress={pickDocument}
       >
         <Text style={styles.buttonText}>
-          {hasFile ? '🔄 Cambiar Archivo' : '📂 Seleccionar Archivo'}
+          {hasFile ? 'Cambiar Archivo' : 'Seleccionar Archivo'}
         </Text>
       </TouchableOpacity>
 
@@ -76,10 +76,10 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   buttonDefault: {
-    backgroundColor: '#4b5563', // Gris para estado inicial
+    backgroundColor: '#25788b',
   },
   buttonSelected: {
-    backgroundColor: '#1e293b', // Oscuro si ya hay un archivo
+    backgroundColor: '#1e293b', 
   },
   buttonText: {
     color: '#ffffff',

@@ -80,7 +80,7 @@ export default function HomeScreen() {
 
       <View style={styles.imageCard}>
         <TouchableOpacity style={styles.imageButton} onPress={pickImage}>
-          <Text style={styles.buttonText}>📸 Seleccionar Imagen</Text>
+          <Text style={styles.buttonText}>Seleccionar Imagen</Text>
         </TouchableOpacity>
         {imageUri ? (
           <Image source={{ uri: imageUri }} style={styles.thumbnail} />
@@ -94,12 +94,12 @@ export default function HomeScreen() {
       <View style={styles.uploadSection}>
         {uploading ? (
           <View style={styles.loadingContainer}>
-            <ActivityIndicator size="large" color="#10b981" />
+            <ActivityIndicator size="large" color="#6410b9" />
             <Text style={styles.loadingText}>Subiendo recursos...</Text>
           </View>
         ) : (
           <TouchableOpacity style={styles.submitButton} onPress={handleUpload}>
-            <Text style={styles.submitButtonText}>Subir Todo al Servicio</Text>
+            <Text style={styles.submitButtonText}>Subir Todo al Servicio </Text>
           </TouchableOpacity>
         )}
       </View>
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
     alignItems: 'center' 
 },
   imageButton: { 
-    backgroundColor: '#0070f3', 
+    backgroundColor: '#aa00f3', 
     paddingVertical: 12, 
     paddingHorizontal: 24, 
     borderRadius: 8, 
@@ -156,13 +156,12 @@ const styles = StyleSheet.create({
   placeholderText: { 
     color: '#8a94a6', 
     fontSize: 14, 
-    fontStyle: 'italic' 
 },
   uploadSection: { 
     marginTop: 10 
 },
   submitButton: { 
-    backgroundColor: '#10b981', 
+    backgroundColor: '#069f13', 
     paddingVertical: 16, 
     borderRadius: 8, 
     alignItems: 'center' 
